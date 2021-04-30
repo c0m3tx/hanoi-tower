@@ -1,14 +1,5 @@
-var hanoiCount = 0
-func hanoi(n:Int, a:String, b:String, c:String) {
-    if (n > 0) {
-        hanoi(n: n - 1, a: a, b: c, c: b)
-        hanoiCount = hanoiCount + 1
-        hanoi(n: n - 1, a: b, b: a, c: c)
-    }
+func hanoi(_ n: Int, _ from: String, _ mid: String, _ to: String) -> Int {
+  n == 1 ? 1 : hanoi(n - 1, from, to, mid) + 1 + hanoi(n - 1, mid, from, to)
 }
 
-
-print("start")
-hanoi(n: 32, a: "a", b: "b", c: "c")
-print("done")
-print("moves: \(hanoiCount)")
+print("\(hanoi(32, "a", "b", "c")) moves")
