@@ -4,5 +4,5 @@ defmodule HanoiTower do
   def hanoi(n, a, b, c), do: hanoi(n-1, a, c, b) + 1 + hanoi(n-1, b, a, c)
 end
 
-# moves = HanoiTower.hanoi(32,"a","b","c")
-# IO.puts("#{moves} moves")
+moves = HanoiTower.hanoi(32,"a","b","c")
+IO.puts("#{moves} moves")
