@@ -1,0 +1,10 @@
+hanoiTower : Nat -> Char -> Char -> Char -> Nat
+hanoiTower n a b c =
+    if n == 1 then
+        1
+    else
+        hanoiTower (n - 1) a c b + 1 + hanoiTower (n - 1) b a c
+
+main : '{IO, Exception} ()
+main = do
+    printLine ("Result: " ++ Nat.toText (hanoiTower 32 ?a ?b ?c))
