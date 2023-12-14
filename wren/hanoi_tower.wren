@@ -1,6 +1,6 @@
 class Hanoi {
     static main(n) {
-        hanoi(n, "a", "b", "c")
+        return hanoi(n, "a", "b", "c")
     }
 
     static hanoi(n, a, b, c) {
