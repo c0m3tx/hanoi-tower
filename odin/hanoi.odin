@@ -2,7 +2,7 @@ package main
 
 import "core:fmt"
 
-hanoi :: proc(x: rune, y: rune, z: rune, n: u64) -> u64 {
+hanoi :: proc(x, y, z: rune, n: u64) -> u64 {
 	if n == 1 {
 		return 1
 	}
@@ -11,5 +11,5 @@ hanoi :: proc(x: rune, y: rune, z: rune, n: u64) -> u64 {
 }
 
 main :: proc() {
-	fmt.println(hanoi('a', 'b', 'c', 32))
+	fmt.printfln("Steps: %d", hanoi('a', 'b', 'c', 32))
 }
